@@ -1,0 +1,16 @@
+1) 
+ArrayName            Insert-Time             Append-Time
+extraLargeArray  insert 2.308214752 s    append 13.786805 ms
+
+largeArray       insert 18.501533 ms     append 1.85978 ms
+
+mediumArray      insert 309.695 μs       append 251.116 μs
+
+smallArray       insert 89.581 μs        append 224.053 μs
+
+tinyArray        insert 87.281 μs        append 162.084 μs
+
+It appears that the Insert function (using unshift )utilizes O(n^2) time complexity and therefore takes an icreasingly longer time to execute as the array size increases--Time is increasing exponentially. The append function (using .push) only uses O(n) time complexity which, though time increase, it does so linearly. 
+
+Extra Credit: Because unshift() has to increment all the elements that already present in the Array. But, push() has to insert an element at the end of the array, so none of the Array elements' index has to change.
+
